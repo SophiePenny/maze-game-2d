@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class dogmove2 : MonoBehaviour
+public class enemymove : MonoBehaviour
 {
-    private SpriteRenderer spriteRenderer;
-    public Sprite Dog1_0;
-    public Sprite Dog_1_1_0;
     Rigidbody2D rb;
     int timer;
     int direction;
@@ -21,16 +18,12 @@ public class dogmove2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = Dog1_0;
         timer ++;
         //Debug.Log(timer);
-        rb.velocity = new Vector2(0, direction);
+        rb.velocity = new Vector2(direction, 0);
         if (timer > 700)
         {
             direction = -direction;
-            spriteRenderer = GetComponent<SpriteRenderer>();
-            spriteRenderer.sprite = Dog_1_1_0;
             timer = 0;
         }
     }
