@@ -61,7 +61,7 @@ public class ScoringAndHealth : MonoBehaviour
 
         if(collide.gameObject.name == "fox")
         {
-            TakeDamage(10);
+            TakeDamage(20);
         }
 
         if(collide.gameObject.name == "carrot")
